@@ -47,6 +47,7 @@ public class ProductService {
         return new ProductResponseDto(product);
     }
 
+    @org.springframework.transaction.annotation.Transactional(readOnly=true)
     public Page<ProductResponseDto> getProducts(User user,int page, int size, String sortBy, boolean isAsc) {
 
 
